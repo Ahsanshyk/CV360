@@ -27,7 +27,6 @@ class JobDescriptionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_job_description)
 
-        // Initialize Room database
         database = Room.databaseBuilder(
             applicationContext,
             ResumeDatabase::class.java, "resume_database"
@@ -54,7 +53,7 @@ class JobDescriptionActivity : AppCompatActivity() {
     private fun openFileChooser() {
         val intent = Intent(Intent.ACTION_GET_CONTENT)
         intent.type = "application/pdf"
-        startActivityForResult(intent, PDF_REQUEST_CODE)
+        this.startActivityForResult(intent, PDF_REQUEST_CODE)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -63,7 +62,7 @@ class JobDescriptionActivity : AppCompatActivity() {
         if (requestCode == PDF_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
             val fileUri: Uri? = data?.data
             if (fileUri != null) {
-                resumePath = fileUri.toString() // Store the file URI as a string
+                resumePath = fileUri.toString()
                 Toast.makeText(this, "Resume selected!", Toast.LENGTH_SHORT).show()
             }
         }
@@ -80,7 +79,7 @@ class JobDescriptionActivity : AppCompatActivity() {
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this@JobDescriptionActivity, AnalysisResultActivity::class.java)
             startActivity(intent)
-        }, 3000) // 3000 milliseconds = 3 seconds
+        }, 3000)
 
 //            }
 //        }
