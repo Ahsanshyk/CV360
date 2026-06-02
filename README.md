@@ -41,18 +41,6 @@ An AI-powered Android application that analyzes resumes against job descriptions
 - **Architecture:** MVVM
 - **UI:** Material Design Components
 
----
-
-## 📸 Screenshots
-
-Add screenshots of your application here.
-
-| Home Screen | Resume Upload | Analysis Results | History |
-|------------|--------------|-----------------|---------|
-| Screenshot | Screenshot | Screenshot | Screenshot |
-
----
-
 ## ⚙️ Installation
 
 ### Prerequisites
