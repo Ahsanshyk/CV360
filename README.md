@@ -1,198 +1,126 @@
 <div align="center">
 
-<img src="images/logo.png" width="170"/>
+<img src="./logo.png" width="180"/>
 
 # CV360 – AI Resume Analyzer
 
-### 🚀 Take your CV to the Next Level
+### 🚀 Take Your CV to the Next Level
 
-An AI-powered Android application that compares a resume with a job description using **Google Gemini Pro API**, calculates a similarity score, and provides personalized recommendations to improve the resume.
+An AI-powered Android application that intelligently compares resumes with job descriptions using **Google Gemini Pro API**, calculates a similarity score, and provides personalized recommendations to improve employability.
 
-![Platform](https://img.shields.io/badge/Platform-Android-3DDC84?style=for-the-badge&logo=android)
-![Language](https://img.shields.io/badge/Language-Kotlin-7F52FF?style=for-the-badge&logo=kotlin)
-![AI](https://img.shields.io/badge/AI-Gemini%20Pro%20API-4285F4?style=for-the-badge&logo=google)
-![UI](https://img.shields.io/badge/UI-XML-orange?style=for-the-badge)
+![Android](https://img.shields.io/badge/Platform-Android-3DDC84?style=for-the-badge&logo=android)
+![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin)
+![Gemini](https://img.shields.io/badge/Google-Gemini%20Pro%20API-4285F4?style=for-the-badge&logo=google)
+![Material](https://img.shields.io/badge/UI-Material%20Design-6200EE?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 
 </div>
 
 ---
 
-# 📱 Overview
+# 📖 Overview
 
-CV360 is an AI-powered Android application designed to help job seekers evaluate how well their resumes match specific job descriptions.
+CV360 is an AI-powered Android application developed using **Kotlin**, **XML**, and **Google Gemini Pro API**. The application evaluates how well a candidate's resume matches a given job description by analyzing skills, technologies, experience, education, and relevant keywords.
 
-The application leverages **Google Gemini Pro API** to intelligently compare resume content against job requirements, calculate a similarity score, identify missing skills, and generate personalized recommendations.
-
-Instead of manually reviewing resumes, users receive instant AI-driven feedback that helps them optimize their CV before applying for jobs.
+After processing, the application generates a **Similarity Score** and provides intelligent recommendations to help users improve their resumes before applying for jobs.
 
 ---
 
-# ✨ Features
+# ✨ Key Features
 
-## 📄 Resume Upload
-
-- Upload Resume (PDF/DOCX)
-- Easy document selection
-- Resume validation
-
----
-
-## 💼 Job Description Analysis
-
-- Paste any Job Description
-- Supports long job descriptions
-- AI-ready input processing
+- 📄 Upload Resume (PDF/DOCX)
+- 💼 Paste Job Description
+- 🤖 AI Resume Analysis using Gemini Pro
+- 📊 Resume Matching Score
+- 🎯 Skill Gap Identification
+- 💡 Personalized Recommendations
+- ⚡ Fast AI Processing
+- 📱 Modern Android User Interface
 
 ---
 
-## 🤖 AI Resume Matching
+# 📊 Application Workflow
 
-- Google Gemini Pro API integration
-- Resume vs Job Description comparison
-- Keyword analysis
-- Skills matching
-- Experience evaluation
-- Education analysis
+<div align="center">
 
----
+<img src="./cv360-app-flow.png" width="100%"/>
 
-## 📊 Similarity Score
+</div>
 
-The application calculates
-
-- Resume Match Percentage
-- Skills Match
-- Missing Keywords
-- Overall Compatibility Score
-
-Example:
-
-```
-Similarity Score
-
-70%
-```
-
----
-
-## 💡 Personalized Recommendations
-
-AI suggests improvements such as
-
-- Missing Technical Skills
-- Required Experience
-- Framework Knowledge
-- Resume Enhancement Tips
-- Career Improvement Suggestions
-
-Example
-
-```
-✓ Learn Room Database
-✓ Improve Android UI/UX
-✓ Gain AI Integration Experience
-✓ Strengthen Kotlin Skills
-```
-
----
-
-# 📱 Application Workflow
-
-```
-Splash Screen
-      │
-      ▼
-Enter Job Description
-      │
-      ▼
-Upload Resume
-      │
-      ▼
-Gemini Pro API Analysis
-      │
-      ▼
-Resume Matching
-      │
-      ▼
-Similarity Score
-      │
-      ▼
-Recommendations
-      │
-      ▼
-Resume Improvement
-```
-
----
-
-# 📸 Screenshots
-
-| Splash Screen | Upload Resume |
-|--------------|---------------|
-| <img src="screenshots/splash.png" width="250"/> | <img src="screenshots/upload.png" width="250"/> |
-
-| Resume Analysis | Results |
-|--------------|-------------|
-| <img src="screenshots/analysis.png" width="250"/> | <img src="screenshots/result.png" width="250"/> |
+The application follows an AI-driven workflow where users upload their resumes and provide a target job description. CV360 sends both inputs to Google's Gemini Pro API, which analyzes the content, identifies matching skills and experience, calculates a similarity score, and generates personalized recommendations for resume improvement.
 
 ---
 
 # 🧠 How It Works
 
-### Step 1
-
-User enters the desired Job Description.
-
-↓
-
-### Step 2
-
-User uploads their Resume.
-
-↓
-
-### Step 3
-
-The application sends the Resume and Job Description to **Google Gemini Pro API**.
-
-↓
-
-### Step 4
-
-Gemini AI analyzes
-
-- Skills
-- Experience
-- Education
-- Keywords
-- Technologies
-- Resume Structure
-
-↓
-
-### Step 5
-
-AI returns
-
-- Similarity Score
-- Missing Skills
-- Personalized Suggestions
-
-↓
-
-### Step 6
-
-User improves the Resume before applying.
+```
+Start
+   │
+   ▼
+Splash Screen
+   │
+   ▼
+Enter Job Description
+   │
+   ▼
+Upload Resume
+   │
+   ▼
+Gemini Pro API
+   │
+   ▼
+AI Resume Analysis
+   │
+   ▼
+Similarity Score
+   │
+   ▼
+Recommendations
+   │
+   ▼
+Resume Improvement
+   │
+   ▼
+End
+```
 
 ---
 
-# 🛠 Technology Stack
+# 🏗️ System Architecture
+
+```
+                User
+                  │
+                  ▼
+          Android Application
+                  │
+        ┌─────────┴─────────┐
+        ▼                   ▼
+ Job Description      Resume Upload
+        │                   │
+        └─────────┬─────────┘
+                  ▼
+          Gemini Pro API
+                  │
+         AI Resume Analysis
+                  │
+      ┌───────────┼───────────┐
+      ▼           ▼           ▼
+ Similarity   Skill Gap   Suggestions
+    Score      Analysis
+                  │
+                  ▼
+            Result Screen
+```
+
+---
+
+# ⚙️ Technology Stack
 
 | Technology | Purpose |
-|------------|----------|
+|------------|---------|
 | Kotlin | Android Development |
-| XML | UI Design |
+| XML | User Interface |
 | Android Studio | IDE |
 | Google Gemini Pro API | AI Resume Analysis |
 | Material Design | UI Components |
@@ -201,24 +129,16 @@ User improves the Resume before applying.
 
 # 📂 Project Structure
 
-```
+```text
 CV360
 │
-├── app
-│
-├── java
-│   ├── activities
-│   ├── adapters
-│   ├── utils
-│   ├── models
-│   └── api
-│
-├── res
-│   ├── drawable
-│   ├── layout
-│   ├── values
-│   └── mipmap
-│
+├── app/
+├── gradle/
+├── README.md
+├── logo.png
+├── cv360-app-flow.png
+├── build.gradle.kts
+├── settings.gradle.kts
 └── AndroidManifest.xml
 ```
 
@@ -229,13 +149,13 @@ CV360
 ### Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/CV360.git
+git clone https://github.com/Ahsanshyk/CV360.git
 ```
 
-### Open Project
+### Open in Android Studio
 
 ```
-Android Studio
+Android Studio Hedgehog or Later
 ```
 
 ### Add Gemini API Key
@@ -244,45 +164,41 @@ Android Studio
 const val GEMINI_API_KEY = "YOUR_API_KEY"
 ```
 
-### Run Application
+### Run
 
 ```
 Connect Android Device
 
-or
+OR
 
-Start Emulator
+Launch Emulator
 
 Run ▶
 ```
 
 ---
 
-# 🎯 Future Improvements
+# 🎯 Future Enhancements
 
-- Login & Authentication
-- Resume History
-- Cloud Backup
-- ATS Score
+- ATS Resume Score
 - AI Cover Letter Generator
 - Resume Templates
 - Interview Question Generator
-- PDF Report Export
+- Resume History
+- Cloud Backup
 - Dark Mode
 - Multi-language Support
 
 ---
 
-# 📈 Key Highlights
+# 📈 Project Highlights
 
-- AI-powered Resume Analysis
-- Intelligent Skill Matching
-- Similarity Score
-- Resume Optimization
-- Personalized Recommendations
-- Modern Android UI
-- Fast Processing
-- Gemini Pro API Integration
+- 🤖 AI-powered Resume Matching
+- 📊 Similarity Score Generation
+- 💡 Personalized Recommendations
+- ⚡ Google Gemini Pro Integration
+- 📱 Modern Android UI
+- 🚀 Kotlin + XML Architecture
 
 ---
 
@@ -292,29 +208,19 @@ Run ▶
 
 Android Developer
 
-📧 Email: ahsanshaikh5534@gmail.com
+📧 **Email:** ahsanshaikh5534@gmail.com
 
-🔗 LinkedIn:
-linkedin.com/in/ahsan-ahmed-shaikh
+💼 **LinkedIn:**  
+https://linkedin.com/in/ahsan-ahmed-shaikh
 
-💻 GitHub:
+💻 **GitHub:**  
 https://github.com/Ahsanshyk
-
----
-
-# ⭐ Support
-
-If you like this project, don't forget to **Star ⭐ the repository**.
 
 ---
 
 <div align="center">
 
-### CV360
-
-### AI Resume Analyzer
-
-**Take your CV to the Next Level**
+## ⭐ If you like this project, don't forget to Star the repository!
 
 Made with ❤️ by **Ahsan Ahmed Shaikh**
 
